@@ -1,5 +1,4 @@
-package gettestie.src.main.java.rocks.zipcode;
-
+package rocks.zipcode;
 
 public class Person {
     private String name;
@@ -12,6 +11,10 @@ public class Person {
     Person(String name, int yearOfBirth) {
         this.name = name;
         this.yearOfBirth = yearOfBirth;
+    }
+
+    Person(String name){
+        this.name = name;
     }
 
     /**
@@ -63,4 +66,7 @@ public class Person {
     {
         return "Name: " + name + "\n" + "Year of birth: " + yearOfBirth + "\n";
     }
+
+    // for compare
+    public int compareTo(Person o){return this.name.compareTo(o.getName());}
 }

@@ -1,6 +1,6 @@
 package rocks.zipcode;
 
-public class Person {
+public class Person implements Comparable {
     private String name;
     private int yearOfBirth;
     private Address address;
@@ -67,6 +67,15 @@ public class Person {
         return "Name: " + name + "\n" + "Year of birth: " + yearOfBirth + "\n";
     }
 
-    // for compare
-    public int compareTo(Person o){return this.name.compareTo(o.getName());}
+    //@Override
+
+//    @Override
+//    public int compareTo(Person p) {
+//        return this.yearOfBirth - p.yearOfBirth;
+//    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
 }
